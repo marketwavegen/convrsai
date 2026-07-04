@@ -93,8 +93,8 @@ ul{ margin: 0; }
 }
 .nav{ display: flex; align-items: center; gap: 28px; }
 .logo{ display: flex; align-items: center; text-decoration: none; line-height: 1; margin-right: auto; }
-.logo-img{ height: 32px; width: auto; display: block; border-radius: 4px; }
-.logo-img.small{ height: 28px; }
+.logo-img{ height: 50px; width: auto; display: block; border-radius: 4px; }
+.logo-img.small{ height: 42px; }
 .nav-links{ display: flex; gap: 26px; }
 .nav-links a{
 	color: rgba(255,255,255,.78); text-decoration: none;
@@ -685,7 +685,7 @@ ul{ margin: 0; }
 	.bottom-cta{ padding: 90px 0; }
 	.btn-xl{ width: 100%; }
 	.footer-grid{ grid-template-columns: 1fr; gap: 32px; }
-	.logo-img{ height: 26px; }
+	.logo-img{ height: 36px; }
 }
 
 /* reduced motion */
