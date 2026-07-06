@@ -749,25 +749,63 @@ p{ margin: 0 0 16px; }
 /* ============ bottom cta ============ */
 .bottom-cta{
 	position: relative;
-	background: var(--navy);
-	padding: 140px 0;
+	background: linear-gradient(160deg, #050B18 0%, var(--navy) 55%, #0A1830 100%);
+	padding: 160px 0;
 	text-align: center;
 	overflow: hidden;
 }
+.cta-bg{ position: absolute; inset: 0; }
+.cta-grid-lines{
+	position: absolute; inset: 0;
+	background-image:
+		linear-gradient(rgba(78,168,245,.07) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(78,168,245,.07) 1px, transparent 1px);
+	background-size: 56px 56px;
+	mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, black 20%, transparent 72%);
+}
 .cta-glow{
-	position: absolute; left: 50%; top: 50%;
-	width: 900px; height: 900px;
-	transform: translate(-50%,-50%);
-	background: radial-gradient(circle, rgba(46,143,224,.28) 0%, rgba(255,230,0,.06) 40%, transparent 70%);
-	animation: ctaBreath 6s ease-in-out infinite;
+	position: absolute; border-radius: 50%;
+	filter: blur(100px);
 	pointer-events: none;
 }
-@keyframes ctaBreath{ 0%,100%{ opacity: .7; transform: translate(-50%,-50%) scale(1);} 50%{ opacity: 1; transform: translate(-50%,-50%) scale(1.08);} }
+.cta-glow-a{
+	width: 760px; height: 760px;
+	left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
+	background: radial-gradient(circle, rgba(46,143,224,.32) 0%, transparent 68%);
+	animation: ctaBreathCenter 6s ease-in-out infinite;
+}
+.cta-glow-b{
+	width: 460px; height: 460px;
+	right: 6%; top: 8%;
+	background: radial-gradient(circle, rgba(255,230,0,.16) 0%, transparent 70%);
+	animation: ctaBreath 8s ease-in-out 1.5s infinite;
+}
+@keyframes ctaBreath{ 0%,100%{ opacity: .7; transform: scale(1);} 50%{ opacity: 1; transform: scale(1.1);} }
+@keyframes ctaBreathCenter{ 0%,100%{ opacity: .7; transform: translate(-50%,-50%) scale(1);} 50%{ opacity: 1; transform: translate(-50%,-50%) scale(1.08);} }
 .cta-inner{ position: relative; }
+.cta-card{
+	position: relative;
+	max-width: 780px; margin: 0 auto;
+	padding: 72px 56px;
+	border: 1px solid rgba(78,168,245,.45);
+	border-radius: var(--radius-xl);
+	background: linear-gradient(160deg, rgba(78,168,245,.1) 0%, rgba(255,255,255,.02) 60%);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 40px 90px rgba(0,0,0,.45), 0 0 60px rgba(46,143,224,.12), 0 0 0 1px rgba(255,255,255,.03) inset;
+}
+.cta-card::before{
+	content: "";
+	position: absolute; left: 50%; top: -1px;
+	transform: translateX(-50%);
+	width: 180px; height: 2px;
+	background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+}
+.cta-card .eyebrow{ margin-left: auto; margin-right: auto; }
 .bottom-cta h2{
 	color: var(--white);
 	font-size: clamp(30px, 4vw, 52px);
-	max-width: 760px; margin: 0 auto 40px;
+	max-width: 640px; margin: 0 auto 40px;
 }
 .bottom-cta h2 .w{ display: inline-block; overflow: hidden; vertical-align: bottom; }
 .bottom-cta h2 .w > span{ display: inline-block; transform: translateY(110%); }
@@ -832,6 +870,7 @@ p{ margin: 0 0 16px; }
 	.accordion-trigger{ padding: 18px 18px; font-size: 15px; }
 	.accordion-panel p{ padding: 0 18px 18px; font-size: 14.5px; }
 	.bottom-cta{ padding: 88px 0; }
+	.cta-card{ padding: 44px 26px; }
 	.btn-xl{ padding: 17px 34px; font-size: 16px; }
 	.float-chip{ display: none; }
 	.hero-cta .btn-lg, .hero-cta .btn-ghost{ width: 100%; justify-content: center; }
