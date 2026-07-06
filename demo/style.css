@@ -204,22 +204,15 @@ body {
     gap: 0.2rem;
 }
 
-.logo-block {
-    background: #3498db;
-    color: #ffff00;
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 800;
-    line-height: 1;
-    padding: 0.35rem 0.75rem;
-    letter-spacing: -0.02em;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+.logo-img {
+    height: 44px;
+    width: auto;
+    display: block;
     border-radius: 4px;
 }
 
-.logo-block.small-logo {
-    font-size: 1rem;
-    padding: 0.2rem 0.5rem;
+.logo-img.small-logo {
+    height: 30px;
 }
 
 .logo-tagline {
