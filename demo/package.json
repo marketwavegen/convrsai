@@ -1,0 +1,15 @@
+{
+  "name": "convrs-ai-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@vercel/edge-config": "^1.4.3",
+    "axios": "^1.14.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
