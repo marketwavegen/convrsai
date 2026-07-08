@@ -819,6 +819,13 @@ p{ margin: 0 0 16px; }
 .footer-links a{ color: #C4D2E6; text-decoration: none; font-size: 14px; font-weight: 600; }
 .footer-links a:hover{ color: var(--yellow); }
 .footer-copy{ font-size: 12.5px; margin: 0; }
+.footer-bottom{
+	display: flex; align-items: center; justify-content: space-between;
+	flex-wrap: wrap; gap: 16px;
+}
+.footer-mw{ display: inline-flex; align-items: center; opacity: .85; transition: opacity .2s ease; }
+.footer-mw:hover{ opacity: 1; }
+.footer-mw img{ display: block; height: 34px; width: auto; border-radius: 4px; }
 
 /* ============ responsive ============ */
 @media (max-width: 1023px){
