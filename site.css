@@ -651,6 +651,13 @@ ul{ margin: 0; }
 .footer-col a:not(.btn):hover{ color: var(--yellow); }
 .footer-col p{ font-size: 13.5px; margin-bottom: 16px; }
 .footer-base p{ font-size: 12.5px; margin: 0; line-height: 1.7; }
+.footer-base{
+	display: flex; align-items: center; justify-content: space-between;
+	flex-wrap: wrap; gap: 16px;
+}
+.footer-mw{ display: inline-flex; align-items: center; opacity: .85; transition: opacity .2s ease; }
+.footer-mw:hover{ opacity: 1; }
+.footer-mw img{ display: block; height: 60px; width: auto; border-radius: 4px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1080px){

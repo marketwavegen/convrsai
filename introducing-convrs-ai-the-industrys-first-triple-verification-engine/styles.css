@@ -825,7 +825,7 @@ p{ margin: 0 0 16px; }
 }
 .footer-mw{ display: inline-flex; align-items: center; opacity: .85; transition: opacity .2s ease; }
 .footer-mw:hover{ opacity: 1; }
-.footer-mw img{ display: block; height: 34px; width: auto; border-radius: 4px; }
+.footer-mw img{ display: block; height: 60px; width: auto; border-radius: 4px; }
 
 /* ============ responsive ============ */
 @media (max-width: 1023px){
